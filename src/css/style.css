@@ -1,0 +1,273 @@
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+}
+#root {
+  width: 100%;
+  font-family: 'Pretendard-Regular';
+}
+.wrapper {
+  max-width: 500px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.DiaryEditor {
+  width: 100%;
+  padding: 50px 30px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.DiaryEditor h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.title {
+  margin-bottom: 20px;
+}
+.lbl {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+.title input {
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 0 10px;
+  border: none;
+  background-color: #fff2df;
+  border-radius: 4px;
+  font-family: 'Pretendard-Regular';
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.content {
+  margin-bottom: 30px;
+}
+.content textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  background-color: #fff2df;
+  border-radius: 4px;
+  font-family: 'Pretendard-Regular';
+  font-size: 16px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+
+/* 셀렉박스 */
+.selectBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selectBox .lbl {
+  margin-right: 15px;
+  margin-bottom: 0;
+}
+.selectBox select {
+  width: 150px;
+  height: 30px;
+  padding: 0 5px;
+  border: 1px solid #4f4f4f;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.selectBox select:focus {
+  border-color: #222;
+}
+.selectBox select option {
+  padding: 10px 0;
+  background-color: #fff;
+}
+
+
+/* 저장 버튼 */
+.btn_sumit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 45px;
+  margin: 30px auto 0;
+  background-color: #F3775B;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 1px 1px 12px 0px rgb(0 0 0 / 8%);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* --------------------
+        일기 개수
+-----------------------*/
+.emotion_score {
+  width: 100%;
+  padding: 30px 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #fff6eb;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* --------------------
+        일기 리스트 
+-----------------------*/
+.DiaryList {
+  width: 100%;
+  padding: 50px 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* 리스트 */
+.list__title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.list__total {
+  margin-bottom: 25px;
+}
+.item__inner {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05), 0px 0px 14px 6px rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+}
+.item__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.item__date {
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #a5a5a5;
+  white-space: nowrap;
+}
+.item__bottom {
+  padding-top: 12px;
+  border-top: 2px dashed #d6d6d6;
+}
+.item__bottom p {
+  font-size: 14px;
+}
+.item__author {
+  margin-bottom: 5px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.item__emotion {
+  margin-top: 10px;
+  color: #2e2e2e;
+}
+
+.item__content {
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.item__content textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px;margin-top: 10px;
+  color: #333;
+  border: 1px solid #a5a5a5;
+  border-radius: 3px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cacaca;
+}
+.header_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .head_text {
+  font-size: 18px;
+}
+
+/* 버튼 */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.MyButton_default {
+  background-color: #f2f2f2;
+}
+.MyButton_negative {
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+}
+.MyButton_positive {
+  background-color: #676767;
+  color: #fff;
+}
+@media (max-width: 500px) {
+  .DiaryList {
+    padding: 30px 20px;
+    margin-top: 30px;
+  }
+  .list__title {
+    margin-bottom: 20px;
+  }
+  .list__total {
+    margin-bottom: 15px;
+  }
+  .item__top {
+    display: block;
+  }
+  .item__author {
+    margin-bottom: 5px;
+  }
+  .item__date {
+    margin-left: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    white-space:normal;
+  }
+}
