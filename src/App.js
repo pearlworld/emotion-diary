@@ -37,27 +37,33 @@ export const DiaryDispatchContext = React.createContext();
 const dummyData = [
   {
     id: 1,
-    emotion: 1,
+    emotion: 3,
     content: "일기 1번",
-    date: 23039394,
+    date: 1703834391888,
   },
   {
-    id: 1,
+    id: 2,
     emotion: 1,
     content: "일기 2번",
-    date: 23039395,
+    date: 1703834391889,
   },
   {
-    id: 1,
-    emotion: 1,
+    id: 3,
+    emotion: 2,
     content: "일기 3번",
-    date: 23039396,
+    date: 1703834391900,
   },
   {
-    id: 1,
-    emotion: 1,
+    id: 4,
+    emotion: 5,
     content: "일기 4번",
-    date: 23039397,
+    date: 1703834391910,
+  },
+  {
+    id: 5,
+    emotion: 4,
+    content: "일기 5번",
+    date: 1703834391914,
   }
 ]
 
@@ -66,6 +72,7 @@ function App() {
   // env.PUBLIC_URL = env.PUBLIC_URL || "";
   const [data, dispatch] = useReducer(reducer, dummyData);
 
+  console.log(new Date().getTime());
   const dataId = useRef(0);
 
   // CREATE
