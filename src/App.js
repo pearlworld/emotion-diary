@@ -72,7 +72,6 @@ function App() {
   // env.PUBLIC_URL = env.PUBLIC_URL || "";
   const [data, dispatch] = useReducer(reducer, dummyData);
 
-  console.log(new Date().getTime());
   const dataId = useRef(0);
 
   // CREATE
@@ -114,9 +113,6 @@ function App() {
       }}>
         <BrowserRouter>
           <div className="wrapper">
-            {/* 
-        <img src={process.env.PUBLIC_URL + './assets/emotion1.png'} /> */}
-
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/new" element={<New />} />

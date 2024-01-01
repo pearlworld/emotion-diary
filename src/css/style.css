@@ -217,23 +217,56 @@ body {
 .header .head_text {
   font-size: 18px;
 }
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  height: 35px;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.head_left button {
+  width: 35px;
+}
+.head_right button {
+  width: 35px;
+}
 
 /* 버튼 */
-.flex {
+.list_head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
 }
-button {
+.selecBox {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 35px;
   height: 35px;
-  border-radius: 5px;
-  font-size: 14px;
+  padding: 0 7px;
+  margin-right: 4px;
+  border: 1px solid #cacaca;
+  border-radius: 4px;
   box-sizing: border-box;
+}
+.selecBox option {
+  box-shadow: none !important;
+}
+.selecBox:focus {
+  border: 1px solid #cacaca;
+  outline: none;
+}
+.list_head .left_col {
+  display: flex;
+  align-items: center;
+}
+.list_head .right_col {
+  flex-grow: 1;
+}
+.list_head .right_col button {
+  width: 100%;
 }
 .MyButton_default {
   background-color: #f2f2f2;
