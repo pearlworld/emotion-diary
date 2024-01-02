@@ -5,9 +5,9 @@ const MyHeader = ({ headText, leftChild, rightChild }) => {
         <div className="head_left">
           {leftChild}
         </div>
-        <h2 className="head_text">
+        <div className="head_text">
           {headText}
-        </h2>
+        </div>
         <div className="head_right">
           {rightChild}
         </div>
