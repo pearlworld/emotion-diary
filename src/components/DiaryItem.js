@@ -5,9 +5,10 @@ import { useNavigate } from 'react-router-dom';
 const DiaryItem = ({ id, emotion, content, date }) => {
 
   const navigate = useNavigate();
-  const strDate = new Date(parseInt(date)).toLocaleDateString().replaceAll(" ", "").replace(/\.$/, "");;
+  const env = process.env;
+  env.PUBLIC_URL = env.PUBLIC_URL || "";
 
-  console.log(strDate);
+  const strDate = new Date(parseInt(date)).toLocaleDateString().replaceAll(" ", "").replace(/\.$/, "");;
 
   const goDetail = () => {
     navigate(`/diary/${id}`);
