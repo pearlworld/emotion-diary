@@ -76,9 +76,6 @@ button {
     cursor: pointer;
     box-sizing: border-box;
 }
-textarea {
-    font-family: 'Pretendard-Regular';
-}
-select {
+textarea,select,input {
     font-family: 'Pretendard-Regular';
 }
