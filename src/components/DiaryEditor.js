@@ -14,22 +14,22 @@ const emotionList = [
     emotion_descript: '완전 좋음'
   },
   {
-    emotion_id: 1,
+    emotion_id: 2,
     emotion_img: process.env.PUBLIC_URL + `./assets/emotion2.png`,
     emotion_descript: '좋음'
   },
   {
-    emotion_id: 1,
+    emotion_id: 3,
     emotion_img: process.env.PUBLIC_URL + `./assets/emotion3.png`,
     emotion_descript: '보통'
   },
   {
-    emotion_id: 1,
+    emotion_id: 4,
     emotion_img: process.env.PUBLIC_URL + `./assets/emotion4.png`,
     emotion_descript: '나쁨'
   },
   {
-    emotion_id: 1,
+    emotion_id: 5,
     emotion_img: process.env.PUBLIC_URL + `./assets/emotion5.png`,
     emotion_descript: '완전 나쁨'
   }
@@ -42,7 +42,12 @@ const getStringDate = (date) => {
 const DiaryEditor = () => {
   const navigate = useNavigate();
 
+  const [emotion, setEmotion] = useState(3);
   const [date, setDate] = useState(getStringDate(new Date()));
+
+  const handleClickEmotion = (emotion) => {
+    setEmotion(emotion);
+  }
 
   return (
     // list - 목록, view - 상세
@@ -67,7 +72,9 @@ const DiaryEditor = () => {
           <h4 className='form_title'>🎈 오늘의 감정</h4>
           <div className='emotion_list'>
             {emotionList.map((it) => (
-              <EmotionItem key={it.emotion_id} {...it} />
+              <EmotionItem
+                key={it.emotion_id} {...it}
+                onClick={handleClickEmotion} />
             ))}
           </div>
         </div>

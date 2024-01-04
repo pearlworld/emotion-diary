@@ -350,3 +350,27 @@ button {
 .form_title {
   margin-bottom: 10px;
 }
+
+/* 감정 상태 */
+.emotion_list {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 2%;
+}
+.emotion_item {
+  cursor: pointer;
+  padding-top: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.emotion_item img {
+  width: 50%;
+  margin-top: 10px;;
+}
+.emotion_item .emotion_name {
+  margin-top: 10px;
+  font-size: 14px;
+}

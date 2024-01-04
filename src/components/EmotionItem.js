@@ -1,8 +1,8 @@
-function EmotionItem({ emotion_id, emotion_descript, emotion_img }) {
+function EmotionItem({ emotion_id, emotion_descript, emotion_img, onClick }) {
   return (
-    <div className="emotion_item">
+    <div onClick={() => onClick(emotion_id)} className="emotion_item">
       <img src={emotion_img} />
-      <span>{emotion_descript}</span>
+      <span className="emotion_name">{emotion_descript}</span>
     </div>
   )
 }
