@@ -359,7 +359,7 @@ button {
 }
 .emotion_item {
   cursor: pointer;
-  padding-top: 20px;
+  padding: 15px 0;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -368,9 +368,31 @@ button {
 }
 .emotion_item img {
   width: 50%;
-  margin-top: 10px;;
 }
 .emotion_item .emotion_name {
   margin-top: 10px;
   font-size: 14px;
+}
+.emotion_off {
+  background-color: #ebebeb;
+}
+.emotion_on_1 {
+  background-color: #64c964;
+  color: #fff;
+}
+.emotion_on_2 {
+  background-color: #9dd772;
+  color: #fff;
+}
+.emotion_on_3 {
+  background-color: #fdce17;
+  color: #fff;
+}
+.emotion_on_4 {
+  background-color: #fd8446;
+  color: #fff;
+}
+.emotion_on_5 {
+  background-color: #fd565f;
+  color: #fff;
 }

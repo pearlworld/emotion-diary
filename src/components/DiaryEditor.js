@@ -74,7 +74,9 @@ const DiaryEditor = () => {
             {emotionList.map((it) => (
               <EmotionItem
                 key={it.emotion_id} {...it}
-                onClick={handleClickEmotion} />
+                onClick={handleClickEmotion}
+                isSelected={it.emotion_id === emotion}
+              />
             ))}
           </div>
         </div>
