@@ -68,17 +68,19 @@ const dummyData = [
 ]
 
 function App() {
-  // const env = process.env;
-  // env.PUBLIC_URL = env.PUBLIC_URL || "";
   const [data, dispatch] = useReducer(reducer, dummyData);
 
   const dataId = useRef(0);
-
   // CREATE
-  const onCreate = (author, content, emotion) => {
+  const onCreate = (date, content, emotion) => {
     dispatch({
       type: "CREATE",
-      data: { author, content, emotion, id: dataId.current }
+      data: {
+        id: dataId.current,
+        date: new Date(date).getTime(),
+        content,
+        emotion
+      }
     });
     dataId.current += 1;
   };
@@ -92,7 +94,7 @@ function App() {
   };
 
   // EDIT
-  // const onEdit = (targetId, newContent) => {
+  // const onEdit = (targetId, date, content, emotion) => {
   //   dispatch({
   //     type: "EDIT",
   //     data: {
