@@ -1,8 +1,8 @@
-const MyButton = ({ text, type, onclick }) => {
+const MyButton = ({ text, type, onClick }) => {
   const btnType = ["positive", "negative"].includes(type) ? type : "default";
 
   return (
-    <button className={["Mybutton", `MyButton_${btnType}`].join(" ")} onClick={onclick}>{text}</button>
+    <button className={["Mybutton", `MyButton_${btnType}`].join(" ")} onClick={onClick}>{text}</button>
   )
 }
 

@@ -57,10 +57,12 @@ const DiaryEditor = () => {
   const handleSubmit = () => {
     if (content.length < 1) {
       contentRef.current.focus();
+      alert("일기를 작성해주세요");
       return;
     } else {
       alert("작성이 완료되었습니다.");
     }
+
     onCreate(date, content, emotion);
     navigate("/", { replace: true });
   }
@@ -72,7 +74,7 @@ const DiaryEditor = () => {
         headText={"새 일기쓰기"}
         leftChild={
           <MyButton text={"< 뒤로가기"}
-            onclick={() => navigate(-1)} />
+            onClick={() => navigate(-1)} />
         } />
       <div className='form_body'>
         <div className='form_row'>
@@ -101,8 +103,8 @@ const DiaryEditor = () => {
           <div className='form_content'>
             <textarea
               placeholder='오늘은 어땠나요?'
-              ref={contentRef}
               value={content}
+              ref={contentRef}
               onChange={(e) => setContent(e.target.value)}
             />
           </div>
