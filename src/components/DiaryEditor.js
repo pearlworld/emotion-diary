@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { DiaryDispatchContext } from '../App'
 import MyButton from './MyButton'
@@ -40,7 +40,7 @@ const getStringDate = (date) => {
   return date.toISOString().slice(0, 10);
 }
 
-const DiaryEditor = () => {
+const DiaryEditor = ({ isEdit, originData }) => {
 
   const contentRef = useRef();
   const [content, setContent] = useState("");
@@ -66,6 +66,12 @@ const DiaryEditor = () => {
     onCreate(date, content, emotion);
     navigate("/", { replace: true });
   }
+
+  useEffect(() => {
+    if (isEdit) {
+
+    }
+  }, [isEdit, originData])
 
   return (
     // list - 목록, view - 상세
