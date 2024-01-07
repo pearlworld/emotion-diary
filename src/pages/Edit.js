@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import { useContext } from 'react'
-import { DiaryStateContext } from '../App'
+import { useEffect, useState, useContext } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import DiaryEditor from '../components/DiaryEditor'
+import { DiaryStateContext } from '../App'
+import DiaryEditor from '../components/DiaryEditor';
 
 const Edit = () => {
+
+  const [originData, setOriginData] = useState();
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const [originData, setOrigindata] = useState("");
   const diaryList = useContext(DiaryStateContext);
 
   useEffect(() => {
@@ -16,8 +16,9 @@ const Edit = () => {
       const targetDiary = diaryList.find(
         (it) => parseInt(it.id) === parseInt(id)
       );
+      console.log(targetDiary);
       if (targetDiary) {
-        setOrigindata(diaryList);
+        setOriginData(targetDiary);
       } else {
         navigate("/", { replace: true });
       }
@@ -25,9 +26,9 @@ const Edit = () => {
   }, [id, diaryList]);
 
   return (
-    <>
+    <div>
       {originData && <DiaryEditor isEdit={true} originData={originData} />}
-    </>
+    </div>
   )
 }
 
