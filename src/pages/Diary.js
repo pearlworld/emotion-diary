@@ -1,9 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { DiaryStateContext } from '../App'
-import { getStringDate } from '../util/date'
+
+// Component
 import MyHeader from '../components/MyHeader'
 import MyButton from '../components/MyButton'
+import { getStringDate } from '../util/date'
+import { emotionList } from '../util/emotion'
 
 const Diary = () => {
   const { id } = useParams();
@@ -28,6 +31,10 @@ const Diary = () => {
   if (!data) {
     return <div className='loading'>로딩중입니다..</div>
   } else {
+
+    const curEmotionData = emotionList.find((it) => parseInt(it.emotion_id) === parseInt(data.emotion));
+    console.log(curEmotionData);
+
     return (
       <div className='diaryDetail'>
         <MyHeader
@@ -36,6 +43,13 @@ const Diary = () => {
             onClick={() => navigate(-1)} />}
           rightChild={<MyButton text={"수정하기"}
             onClick={() => navigate(`/edit/${data.id}`)} />} />
+        <div className='detail_inner'>
+          <div className='detail_emotion'>
+            <h3>오늘의 감정</h3>
+            <img src={curEmotionData.emotion_img}></img>
+            <p className='emotion_name'>{curEmotionData.emotion_descript}</p>
+          </div>
+        </div>
       </div>
     )
   }

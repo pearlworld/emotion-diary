@@ -1,4 +1,6 @@
-/* 레이아웃 */
+/* --------------------
+        layout 
+-----------------------*/
 body {
   display: flex;
   align-items: center;
@@ -17,55 +19,6 @@ body {
   background-color: #fff;
   box-sizing: border-box;
 }
-.DiaryEditor {
-  width: 100%;
-  padding: 50px 30px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-.DiaryEditor h2 {
-  margin-bottom: 30px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-.title {
-  margin-bottom: 20px;
-}
-.lbl {
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #2e2e2e;
-}
-.title input {
-  display: block;
-  width: 100%;
-  height: 45px;
-  padding: 0 10px;
-  border: none;
-  background-color: #fff2df;
-  border-radius: 4px;
-  font-family: 'Pretendard-Regular';
-  font-size: 16px;
-  box-sizing: border-box;
-}
-.content {
-  margin-bottom: 30px;
-}
-.content textarea {
-  width: 100%;
-  height: 200px;
-  padding: 10px;
-  background-color: #fff2df;
-  border-radius: 4px;
-  font-family: 'Pretendard-Regular';
-  font-size: 16px;
-  resize: none;
-  box-sizing: border-box;
-}
-
 
 /* 셀렉박스 */
 .selectBox {
@@ -95,116 +48,10 @@ body {
 }
 
 
-/* 저장 버튼 */
-.btn_sumit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 45px;
-  margin: 30px auto 0;
-  background-color: #F3775B;
-  border-radius: 7px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  box-shadow: 1px 1px 12px 0px rgb(0 0 0 / 8%);
-  cursor: pointer;
-  box-sizing: border-box;
-}
 
 /* --------------------
-        일기 개수
+        header 
 -----------------------*/
-.emotion_score {
-  width: 100%;
-  padding: 30px 30px;
-  margin: 0 auto;
-  margin-top: 30px;
-  background-color: #fff6eb;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-/* --------------------
-        일기 리스트 
------------------------*/
-.DiaryList {
-  width: 100%;
-  padding: 50px 30px;
-  margin: 0 auto;
-  margin-top: 30px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-/* 리스트 */
-.list__title {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.list__total {
-  margin-bottom: 25px;
-}
-.item__inner {
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05), 0px 0px 14px 6px rgba(0, 0, 0, 0.03);
-  box-sizing: border-box;
-}
-.item__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-.item__date {
-  margin-left: 5px;
-  font-size: 14px;
-  font-weight: 300;
-  color: #a5a5a5;
-  white-space: nowrap;
-}
-.item__bottom {
-  padding-top: 12px;
-  border-top: 2px dashed #d6d6d6;
-}
-.item__bottom p {
-  font-size: 14px;
-}
-.item__author {
-  margin-bottom: 5px;
-  font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.item__emotion {
-  margin-top: 10px;
-  color: #2e2e2e;
-}
-
-.item__content {
-  color: #333;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.item__content textarea {
-  width: 100%;
-  height: 50px;
-  padding: 10px;margin-top: 10px;
-  color: #333;
-  border: 1px solid #a5a5a5;
-  border-radius: 3px;
-  resize: none;
-  box-sizing: border-box;
-}
-
-/* Header */
 .header {
   padding-bottom: 15px;
   border-bottom: 1px solid #cacaca;
@@ -222,6 +69,14 @@ body {
   justify-content: center;
   font-size: 18px;
 }
+.head_left {
+  width: 25%;
+  justify-content: start;
+}
+.head_right {
+  width: 25%;
+  justify-content: end;
+}
 button {
   display: flex;
   align-items: center;
@@ -232,16 +87,10 @@ button {
   font-size: 14px;
   box-sizing: border-box;
 }
-.head_left {
-  width: 25%;
-  justify-content: start;
-}
-.head_right {
-  width: 25%;
-  justify-content: end;
-}
 
-/* 리스트 */
+/* --------------------
+      일기 리스트
+-----------------------*/
 .list_head {
   display: flex;
   align-items: center;
@@ -291,6 +140,8 @@ button {
   background-color: #676767;
   color: #fff;
 }
+
+/* 리스트 body */
 .list_body {
   margin-top: 20px;
 }
@@ -302,6 +153,7 @@ button {
   margin-bottom: 10px;
   border: 1px solid #eee;
   border-radius: 7px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05), 0px 0px 14px 6px rgba(0, 0, 0, 0.03);
   box-sizing: border-box;
 }
 .item_img img {
@@ -332,7 +184,9 @@ button {
   font-size: 14px;
 }
 
-/* 폼 */
+/* --------------------
+      일기 작성 폼 
+-----------------------*/
 .form_body {
   margin-top: 40px;
 }
@@ -354,7 +208,7 @@ button {
   margin-bottom: 12px;
 }
 
-/* 감정 상태 */
+/* 이모션 이미지 */
 .emotion_list {
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -399,7 +253,6 @@ button {
   background-color: #fd565f;
   color: #fff;
 }
-
 .form_content textarea {
   width: 100%;
   height: 100px;
@@ -414,4 +267,23 @@ button {
   align-items: center;
   justify-content: space-between;
   margin-top: 40px;
+}
+
+/* --------------------
+        일기 상세 
+-----------------------*/
+.detail_inner {
+  margin-top: 40px;
+}
+.detail_emotion {
+  text-align: center;
+}
+.detail_emotion h3 {
+  margin-bottom: 20px;
+}
+.detail_emotion img {
+  width: 100px;
+}
+.detail_emotion .emotion_name {
+margin-top: 10px;
 }
