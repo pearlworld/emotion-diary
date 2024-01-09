@@ -91,7 +91,7 @@ const DiaryList = ({ diaryList }) => {
           ))
         ) : (
           <div className='nodata'>
-            <p>이번 달 일기가 아직 없습니다.</p>
+            <p>이번달 일기가 아직 없습니다.</p>
           </div>
         )}
 
