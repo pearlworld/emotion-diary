@@ -23,7 +23,10 @@ const Home = () => {
       const lastDay = new Date(
         curDate.getFullYear(),
         curDate.getMonth() + 1,
-        0
+        0,
+        23, // 23시 59분 59초
+        59,
+        59
       ).getTime();
 
       setData(
@@ -52,8 +55,9 @@ const Home = () => {
     <div>
       <MyHeader
         headText={headText}
-        leftChild={<MyButton text={'<'} onClick={decreaseMonth} />}
-        rightChild={<MyButton text={'>'} onClick={increaseMonth} />}
+        leftChild={<MyButton text={<img src='./assets/arrow_prev.png' />} onClick={decreaseMonth} />}
+        rightChild={<MyButton text={<img src='./assets/arrow_next.png' />}
+          onClick={increaseMonth} />}
       />
       <DiaryList diaryList={data} />
     </div>

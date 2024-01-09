@@ -47,7 +47,11 @@ const Diary = () => {
           <div className='detail_emotion'>
             <h3>오늘의 감정</h3>
             <img src={curEmotionData.emotion_img}></img>
-            <p className='emotion_name'>{curEmotionData.emotion_descript}</p>
+            <p className='emotion_name'>
+              {curEmotionData.emotion_descript}</p>
+          </div>
+          <div className='detail_content'>
+            <p>{data.content}</p>
           </div>
         </div>
       </div>

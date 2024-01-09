@@ -128,6 +128,9 @@ button {
   padding: 0 13px;
   box-sizing: border-box;
 }
+.Mybutton img {
+  width: 9px;
+}
 .MyButton_default {
   background-color: #f2f2f2;
 }
@@ -286,4 +289,12 @@ button {
 }
 .detail_emotion .emotion_name {
 margin-top: 10px;
+}
+.detail_content {
+  padding: 20px;
+  margin-top: 35px;
+  background-color: #ededed;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
 }
