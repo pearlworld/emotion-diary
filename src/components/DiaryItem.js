@@ -26,12 +26,16 @@ const DiaryItem = ({ id, emotion, content, date }) => {
       >
         <img src={process.env.PUBLIC_URL + `./assets/emotion${emotion}.png`} />
       </div>
-      <div className='item_text' onClick={goDetail}>
-        <div className='item_date'>{strDate}</div>
-        <div className='item_content'>{content}</div>
-      </div>
-      <div onClick={goEdit}>
-        <MyButton text={"수정하기"} />
+      <div className='item_right'>
+        <div className='item_text' onClick={goDetail}>
+          <div className='item_date'>{strDate}</div>
+          <div className='item_content'>{content}</div>
+        </div>
+        <div
+          className='edit_btn'
+          onClick={goEdit}>
+          <MyButton text={"수정하기"} />
+        </div>
       </div>
     </div>
   )
