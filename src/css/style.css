@@ -152,7 +152,8 @@ button {
 }
 .list_item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  height: 113px;
   padding: 15px;
   margin-bottom: 13px;
   border: 1px solid #eee;
@@ -168,11 +169,12 @@ button {
   align-items: flex-start;
   justify-content: space-between;
   width: calc(100% - 93px);
+  height: 74px;
   margin-left: 13px;
 }
 .item_text {
   width: calc(100% - 90px);
-  padding-top: 10px;
+  padding-top: 5px;
 }
 .item_date {
   margin-bottom: 5px;
@@ -201,6 +203,14 @@ button {
   height: 120px;
   border-radius: 7px;
   font-size: 14px;
+}
+@media (max-width: 480px) {
+.item_img {
+    width: 50px;
+  }
+  .item_right {
+      width: calc(100% - 63px);
+  }
 }
 
 /* --------------------
