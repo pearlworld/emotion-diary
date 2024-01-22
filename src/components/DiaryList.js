@@ -17,7 +17,7 @@ const filterOptionList = [
 ]
 
 // 셀렉박스 컴포넌트
-const ControlMenu = ({ value, onChange, optionList }) => {
+const ControlMenu = React.memo(({ value, onChange, optionList }) => {
   return (
     <select
       className='selecBox'
@@ -30,7 +30,7 @@ const ControlMenu = ({ value, onChange, optionList }) => {
       ))}
     </select>
   )
-}
+});
 
 const DiaryList = ({ diaryList }) => {
   const navigate = useNavigate();
